@@ -35,6 +35,9 @@ const Nav = () => (
             <li className="right tab waves-effect waves-light btn" id="mapsearch">
                 <a href="/Map">Search on Map</a>
             </li>
+            <li className="tab">
+            <a href="https://autismontheseas.com/book-cruise/cruises-with-our-staff/schedule-of-cruises" target="_blank">Cruise with Autism on the Seas</a>
+            </li>
         </ul>
     </div>
 </nav>
