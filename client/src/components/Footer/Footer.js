@@ -9,7 +9,7 @@ const Footer = () => (
             <a className="grey-text text-lighten-4 right">© 2018 FIFTH ELEMENT</a>
             </li>
             <li>
-                <a className="grey-text text-lighten-4 left footerlink" href="/Contact">Contact Us</a>
+                <a className="grey-text text-lighten-4 left footerlink" href="mailto:shibaseattle2010@gmail.com?Subject=Hello From Accessible Travel" target="_top">Contact Us</a>
             </li>
             <li>
                 <a className="grey-text text-lighten-4 left footerlink" href="/Admin">Admin Login</a>
