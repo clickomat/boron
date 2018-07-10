@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Delicious Adventures';
+    src: url('DeliciousAdventures.eot');
+    src: url('DeliciousAdventures.eot?#iefix') format('embedded-opentype'),
+        url('DeliciousAdventures.woff2') format('woff2'),
+        url('DeliciousAdventures.woff') format('woff'),
+        url('DeliciousAdventures.ttf') format('truetype'),
+        url('DeliciousAdventures.svg#DeliciousAdventures') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Modern_Sans_Light';
+    src: url('Modern_Sans_Light.eot');
+    src: url('Modern_Sans_Light.eot?#iefix') format('embedded-opentype'),
+        url('Modern_Sans_Light.woff2') format('woff2'),
+        url('Modern_Sans_Light.woff') format('woff'),
+        url('Modern_Sans_Light.ttf') format('truetype'),
+        url('Modern_Sans_Light.svg#Modern_Sans_Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+

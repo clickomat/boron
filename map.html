@@ -1,0 +1,265 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBacf-yGvhzUPn4NA8QQrUHcX_4FG5yNM&content_copy&callback=initMap"></script>
+</head>
+<style>
+    #map {
+        height: 100%;
+        width: 100%;
+        -webkit-box-shadow: 12px 29px 81px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 12px 29px 81px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 12px 29px 81px 0px rgba(0, 0, 0, 0.75);
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<body>
+    <div id="map">
+    
+
+    <script>
+        function initMap() {
+
+            var disney = {
+                info: '<strong>Disney World</strong><br>\r\
+					<a href="<a href="https://disneyworld.disney.go.com/guest-services/guests-with-disabilities/">Services</a>',
+                lat: 28.3852,
+                long: -81.5639
+            };
+
+            var santabarbarazoo = {
+                info: '<strong>Santa Barbara Zoo</strong><br>\r\
+					<a href="https://www.sbzoo.org/visit/">Website</a>',
+                lat: 34.4204,
+                long: -119.6664
+            };
+
+            var elmwoodparkzoo = {
+                info: '<strong>Elmwood Park Zoo</strong><br>\r\
+					<a href="http://www.elmwoodparkzoo.org/amenities-and-accessibility.php">Services</a>',
+                lat: 42.002707,
+                long: -87.661236
+            };
+
+            var sesameplace = {
+                info: '<strong>Sesame Place</strong><br>\r\
+					<a href="https://sesameplace.com/philadelphia/help/accessibility-guide/">Services</a>',
+                lat: 40.1842,
+                long: -74.8722
+            };
+
+            var georgiaaquarium = {
+                info: '<strong>Georgia Aquarium</strong><br>\r\
+					<a href="https://www.georgiaaquarium.org/experience/visit/plan-your-visit/accessibility">Services</a>',
+                lat: 33.7634,
+                long: -84.3951
+            };
+
+            var colonialquaters = {
+                info: '<strong>Colonial Quarters Tour</strong><br>\r\
+					<a href="http://www.colonialquarter.com/">Website</a>',
+                lat: 29.9012,
+                long: -81.3124
+            };
+
+            var edventure = {
+                info: '<strong>EdVenture</strong><br>\r\
+					<a href="http://www.edventure.org/programs">Services</a>',
+                lat: 34.0007,
+                long: -81.0348
+            };
+
+            var sheratonpark = {
+                info: '<strong>Sheraton Park Anaheim</strong><br>\r\
+					<a href="http://www.sheratonparkanaheim.com/rooms">Website</a>',
+                lat: 33.8016,
+                long: -117.9165
+            };
+
+            var crowneplaza = {
+                info: '<strong>Crowne Plaza Tampa Westshore</strong><br>\r\
+					<a href="https://www.cptampawestshore.com/">Website</a>',
+                lat: 27.9454,
+                long: -82.5330
+            };
+
+            var ochorios = {
+                info: '<strong>Beaches Resorts Ocho Rios, Jamaica</strong><br>\r\
+					<a href="http://www.beaches.com/autism-friendly-resorts/">Autism Friendly Kids Camp</a>',
+                lat: 18.4050,
+                long: -76.9801
+            };
+
+            var turkscaicos = {
+                info: '<strong>Beaches Resorts Turks and Caicos</strong><br>\r\
+					<a href="http://www.beaches.com/autism-friendly-resorts/">Autism Friendly Kids Camp</a>',
+                lat: 21.7876,
+                long: -72.1970
+            };
+
+            var negril = {
+                info: '<strong>Beaches Resorts Negril, Jamaica</strong><br>\r\
+					<a href="http://www.beaches.com/autism-friendly-resorts/">Autism Friendly Kids Camp</a>',
+                lat: 18.3140,
+                long: -78.3371
+            };
+
+            var tradewinds = {
+                info: '<strong>Tradewinds Island Resorts</strong><br>\r\
+					<a href="https://www.tradewindsresort.com/explore/kids-activities/special-needs-friendly">Services</a>',
+                lat: 27.7295,
+                long: -82.7438
+            };
+
+            var stpetersburg = {
+                info: '<strong>St Petersburg Beach</strong><br>\r\
+					<a href="https://www.visitstpeteclearwater.com/communities/st-pete-beach">Website</a>',
+                lat: 27.7428,
+                long: -82.7505
+            };
+
+            var adventures = [
+                [disney.info, disney.lat, disney.long, 0],
+                [santabarbarazoo.info, santabarbarazoo.lat, santabarbarazoo.long, 1],
+                [elmwoodparkzoo.info, elmwoodparkzoo.lat, elmwoodparkzoo.long, 2],
+                [sesameplace.info, sesameplace.lat, sesameplace.long, 3],
+                [colonialquaters.info, colonialquaters.lat, colonialquaters.long, 4],
+                [edventure.info, edventure.lat, edventure.long, 5]
+            ];
+
+            var hotels = [
+                [sheratonpark.info, sheratonpark.lat, sheratonpark.long, 0],
+                [crowneplaza.info, crowneplaza.lat, crowneplaza.long, 1]
+            ]
+
+            var beaches = [
+                [ochorios.info, ochorios.lat, ochorios.long, 0],
+                [turkscaicos.info, turkscaicos.lat, turkscaicos.long, 1],
+                [negril.info, negril.lat, negril.long, 2],
+                [tradewinds.info, tradewinds.lat, tradewinds.long, 3],
+                [stpetersburg.info, stpetersburg.lat, stpetersburg.long, 4]
+            ]
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 3,
+                center: new google.maps.LatLng(39.8283, -98.5795),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+
+            var infowindow = new google.maps.InfoWindow({});
+
+            var marker, i;
+
+            var image1 = {
+                url: 'https://maps.google.com/mapfiles/kml/shapes/arts.png',
+                // This marker is 20 pixels wide by 32 pixels high.
+                scaledSize: new google.maps.Size(25, 25),
+                // The origin for this image is (0, 0).
+                origin: new google.maps.Point(0, 0),
+                // The anchor for this image is the base of the flagpole at (0, 32).
+                anchor: new google.maps.Point(0, 0)
+            };
+            // Shapes define the clickable region of the icon. The type defines an HTML
+            // <area> element 'poly' which traces out a polygon as a series of X,Y points.
+            // The final coordinate closes the poly by connecting to the first coordinate.
+            var shape = {
+                coords: [1, 1, 1, 20, 18, 20, 18, 1],
+                type: 'poly'
+            };
+
+            var image2 = {
+                url: 'https://maps.google.com/mapfiles/kml/shapes/lodging.png',
+
+                scaledSize: new google.maps.Size(25, 25),
+
+                origin: new google.maps.Point(0, 0),
+
+                anchor: new google.maps.Point(0, 0)
+            };
+
+            var shape = {
+                coords: [1, 1, 1, 20, 18, 20, 18, 1],
+                type: 'poly'
+            };
+
+            var image3 = {
+                url: 'https://maps.google.com/mapfiles/kml/shapes/swimming.png',
+
+                scaledSize: new google.maps.Size(25, 25),
+
+                origin: new google.maps.Point(0, 0),
+
+                anchor: new google.maps.Point(0, 0)
+            };
+
+            var shape = {
+                coords: [1, 1, 1, 20, 18, 20, 18, 1],
+                type: 'poly'
+            };
+
+            for (i = 0; i < adventures.length; i++) {
+                var adventure = adventures[i];
+                var marker = new google.maps.Marker({
+                    position: { lat: adventure[1], lng: adventure[2] },
+                    map: map,
+                    icon: image1,
+                    shape: shape,
+                    title: adventure[0],
+                    zIndex: adventure[3]
+                });
+
+                google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                    return function () {
+                        infowindow.setContent(adventures[i][0]);
+                        infowindow.open(map, marker);
+                    }
+                })(marker, i));
+            }
+            for (i = 0; i < hotels.length; i++) {
+                var hotel = hotels[i];
+                var marker = new google.maps.Marker({
+                    position: { lat: hotel[1], lng: hotel[2] },
+                    map: map,
+                    icon: image2,
+                    shape: shape,
+                    title: hotel[0],
+                    zIndex: hotel[3]
+                });
+
+                google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                    return function () {
+                        infowindow.setContent(hotels[i][0]);
+                        infowindow.open(map, marker);
+                    }
+                })(marker, i));
+            }
+            for (i = 0; i < beaches.length; i++) {
+                var beach = beaches[i];
+                var marker = new google.maps.Marker({
+                    position: { lat: beach[1], lng: beach[2] },
+                    map: map,
+                    icon: image3,
+                    shape: shape,
+                    title: beach[0],
+                    zIndex: beach[3]
+                });
+
+                google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                    return function () {
+                        infowindow.setContent(hotels[i][0]);
+                        infowindow.open(map, marker);
+                    }
+                })(marker, i));
+            }
+        }
+    </script>
+    </div>
+</body>
+
+</html>
