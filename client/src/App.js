@@ -9,7 +9,7 @@ import Blog from "./pages/Blog";
 import MapView from "./pages/MapView";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import Contact from "./pages/Contact";
+// import Contact from "./pages/Contact";
 
 const App = () => (
 
@@ -24,7 +24,7 @@ const App = () => (
 				<Route exact path="/Reviews/:id" component={Detail} />
 				<Route exact path="/Blog" component={Blog} />
 				<Route exact path="/Blog/:id" component={Detail} />
-				<Route exact path="/Contact" component={Contact} />
+				{/* <Route exact path="/Contact" component={Contact} /> */}
 				<Route exact path="/Map" component={MapView} />
 				<Route exact path="/Activities" component={Attractions} />
 			</Switch>
