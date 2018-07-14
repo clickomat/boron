@@ -1,6 +1,7 @@
 import React from "react";
 import Hotel from "./../../components/hotel";
 import Reviews from "./../../components/review";
+import Map from"./../MapView";
 
 
 

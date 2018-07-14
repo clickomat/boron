@@ -23,9 +23,11 @@ const App = () => (
 				<Route exact path="/Reviews" component={Reviews} />
 				<Route exact path="/Reviews/:id" component={Detail} />
 				<Route exact path="/Blog" component={Blog} />
-				<Route exact path="/Blog/:id" component={Detail} />
+				<Route exact path="/Blogs/:id" component={Detail} />
 				{/* <Route exact path="/Contact" component={Contact} /> */}
-				<Route exact path="/Map" component={MapView} />
+				<Route exact path="/MapView" component={MapView} />
+		
+
 				<Route exact path="/Activities" component={Attractions} />
 			</Switch>
 			<Footer />
