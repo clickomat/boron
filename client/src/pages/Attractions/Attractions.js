@@ -21,7 +21,7 @@ const Attractions = () => {
                                     </div>
                                     <div className="col s2 offset-s4">
                                         <a className="dropdown-trigger filter" href="#!" data-target="dropdown1">
-                                            Filter By:<i id="dropdownicon" className="material-icons">arrow_drop_down</i>
+                                            Filter By:<i id="dropdown" className="material-icons">arrow_drop_down</i>
                                         </a>
                                         <ul id="dropdown1" className="dropdown-content">
                                             <li>

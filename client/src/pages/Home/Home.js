@@ -42,10 +42,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="row">
+        {/* <div className="row">
       <div className="card-panel col s6 mission"><span class="flow-text"> <Reviews /></span></div>
       <div className="card-panel col s6 mission"><span class="flow-text"><Hotel /></span></div>
-    </div>
+    </div> */}
       </main>
     </div>
   );
