@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import API from './../../utils/API'
-
+import Moment from "react-moment";
 class Review extends Component {
   constructor (props){
     super(props)
@@ -23,11 +23,13 @@ componentDidMount(){
           this.state.reviewList.map(
             (review, i) =>
               <div className="border" key={i}>
-                <p>{review.text}</p>
-                <p>{review.location}</p>
-                <p>{review.rating}</p>
-                <p><h5>{"Reviewed by " + review.author}</h5></p>
-                <p>{'on '+ review.date}</p>
+                <p><h2>{review.Destination}</h2></p>
+                <p><h4>{review.Location}</h4></p>
+                <p><h5>{"Reviewed by " + review.Name}</h5></p>
+                <p>{review.Rating}</p>
+                <p>{review.Review}</p>
+                
+                <Moment date={review.date} />
               </div>
             
           )

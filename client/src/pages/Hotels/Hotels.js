@@ -31,7 +31,7 @@ class Hotels extends Component {
           nome: "",
           location: "",
           rating: "",
-          cost: "$$",
+          cost: "",
           text:"",
           www: ""
         })

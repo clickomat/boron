@@ -78,44 +78,49 @@ render (){
             <div className="row">
               <div className="col s6">
                 <form onSubmit={this.handleFormSubmit}>
-                  <Input
-                    value={this.state.location}
-                    onChange={this.handleInputChange}
-                    name="location"
-                    placeholder="Location (required)"
-                  />
-                  <Input
-                    value={this.state.author}
-                    onChange={this.handleInputChange}
-                    name="author"
-                    placeholder="Author (required)"
-                  />
-                  <Input
-                    value={this.state.rating}
-                    onChange={this.handleInputChange}
-                    name="rating"
-                    placeholder="Rating (required)"
-                  />
-                  <TextArea
-                    value={this.state.text}
-                    onChange={this.handleInputChange}
-                    name="text"
-                    placeholder="Text (Optional)"
-                  />
-                  <FormBtn
-                    disabled={!(this.state.location && this.state.author)}
-                    onClick={this.handleFormSubmit}
-                  >
-                    Submit Review
-                  </FormBtn>
-                </form>
-              </div>
-              <div className="col s6">
-              <p>
+                <Input
+                      value={this.state.Name}
+                      onChange={this.handleInputChange}
+                      name="name"
+                      placeholder="Name (required)"
+                    />
+                    <Input
+                      value={this.state.Location}
+                      onChange={this.handleInputChange}
+                      name="location"
+                      placeholder="Location (required)"
+                    />
+                    <Input
+                      value={this.state.Rating}
+                      onChange={this.handleInputChange}
+                      name="rating"
+                      placeholder="Rating 1-5(required)"
+                    />
+                    <Input
+                      value={this.state.Destination}
+                      onChange={this.handleInputChange}
+                      name="destination"
+                      placeholder="Destination (required)"
+                    />
+                    <TextArea
+                      value={this.state.Review}
+                      onChange={this.handleInputChange}
+                      name="review"
+                      placeholder="Review (Optional)"
+                    />
+                    <FormBtn
+                      disabled={!(this.state.Location && this.state.Name)}
+                      onClick={this.handleFormSubmit}
+                    >
+                      Submit Review
+                    </FormBtn>
+                  </form>
+                </div>
+                <div className="col s6">
+                  <p>
                     <Review />
                   </p>
-              </div>
-            </div>
+                </div>
             <div className="row">
               <div className="col s12">
                 <div className="container">
@@ -129,6 +134,7 @@ render (){
             </div>
           </div>
         </div>
+      </div>
       </div>
     </main>
   );
