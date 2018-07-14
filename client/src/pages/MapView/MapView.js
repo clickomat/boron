@@ -1,7 +1,6 @@
 /*global google*/
-
 import React from 'react';
-import { Component } from 'react';
+import React, { Component } from "react";s
 import GoogleMapReact from 'google-map-react';
 import LocationDot from './LocationDot';
 //import GoogleIcon from './GoogleIcon';
