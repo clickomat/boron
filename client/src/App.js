@@ -24,10 +24,7 @@ const App = () => (
 				<Route exact path="/Reviews/:id" component={Detail} />
 				<Route exact path="/Blog" component={Blog} />
 				<Route exact path="/Blogs/:id" component={Detail} />
-				{/* <Route exact path="/Contact" component={Contact} /> */}
 				<Route exact path="/MapView" component={MapView} />
-		
-
 				<Route exact path="/Activities" component={Attractions} />
 			</Switch>
 			<Footer />

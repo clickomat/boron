@@ -1,14 +1,13 @@
+/* Font Set Up */
 @font-face {
-    font-family: 'Sweet Hipster';
-    src: url('./Fonts/SweetHipster.eot');
-    src: url('./Fonts/SweetHipster.eot?#iefix') format('embedded-opentype'),
-        url('./Fonts/SweetHipster.woff2') format('woff2'),
-        url('./Fonts/SweetHipster.woff') format('woff'),
-        url('./Fonts/SweetHipster.ttf') format('truetype'),
-        url('./Fonts/SweetHipster.svg#SweetHipster') format('svg');
+    font-family: 'WellBred';
+    src: url('WellBred.eot?#iefix') format('embedded-opentype'),  
+        url('WellBred.woff') format('woff'), 
+        url('WellBred.ttf')  format('truetype'), 
+        url('WellBred.svg#WellBred') format('svg');
     font-weight: normal;
     font-style: normal;
-}
+  }
 @font-face {
     font-family: 'Modern_Sans_Light';
     src: url('./Fonts/Modern_Sans_Light.eot');
@@ -20,21 +19,17 @@
     font-weight: 300;
     font-style: normal;
 }
-
-.brand-logo {
-    font-family: 'Advent Pro', sans-serif;
+* {
+    font-family: 'Modern_Sans_Light';
 }
-/* #travel {
-    font-family: 'Ostrich Sans Light';
-} */
+.brand-logo {
+    font-family: 'WellBred', sans-serif;
+}
+/* NavBar */
 nav .brand-logo {
     padding-left: 25px;
     font-size: 4rem;
-    margin-top: 5px;
-}
-
-li, p, h4, h5 {
-    font-family: 'Modern_Sans_Light';
+    margin-top: 10px;
 }
 .nav-extended {
     background-color: #2D2C31;
@@ -43,9 +38,70 @@ li, p, h4, h5 {
     width: 400px;
     margin-right: 2px;
     margin-bottom: 2px;
-    font-family: 'Modern_Sans_Light';
+}
+/* Modals */
+.modal {
+    background-color: #fff;
+    width: 400px;
+    height: calc(100% - 56px);
+}
+.modal-fixed-header {
+    padding: 0;
+    height: 60%;
+}
+.modal-header {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    border-radius: 0 0 2px 2px;
+    background-color: #fafafa;
+    padding: 4px 6px;
+    height: 56px;
+    width: 100%;
+    color: black;
+}
+.modal .modal-content {
+    padding: 0;
 }
 
+.modal-content {
+    position: absolute;
+    top:56px;
+    height: calc(100% - 56px);
+    max-height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    color: black;
+}
+.modal h4 {
+    padding: 24px;
+}
+#custommodalcontent {
+    padding: 24px;
+}
+#loginmodaltitle {
+    padding-top: 10px;
+    margin-top: 0;
+}
+.loginpics {
+    height: 60px;
+    border-radius: 50%;
+} 
+.nomargin {
+    margin-bottom: 0;
+}
+.loginbutton {
+    margin-left: 37%;
+}
+.signedin {
+    display: none;
+}
+#signupbutton2 {
+    color: white; 
+    -webkit-appearance: none;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+/* Footer */
 .page-footer {
     position: fixed;
     background-color: #2D2C31;
@@ -58,13 +114,20 @@ li, p, h4, h5 {
 .links {
     text-align: right;
 }
+.footerlink {
+    margin: 0 10px;
+}
+.footerlink:hover {
+    text-decoration: underline;
+}
 body {
-    background-image: url("./images/puzzle.jpg");
     width: 100%; 
     height: 100%;
+    background-image: url("./images/puzzle.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 .mission {
     background-color: #2D2C31;
@@ -78,9 +141,6 @@ body {
 }
 #mstitle {
     margin-top: 1.68rem;
-}
-.footer-copyright {
-    font-family: 'Modern_Sans_Light';
 }
 .hotels {
     background-color: #2D2C31;
@@ -160,78 +220,10 @@ body {
 #signupbutton {
     margin-right: 20px;
 }
-.footerlink {
-    margin: 0 10px;
-}
-.footerlink:hover {
-    text-decoration: underline;
-}
 .form-control {
     color: aqua;
 }
 .border{border-style: inset;
 margin: 1em;
 padding: 1em;
-}
-.modal {
-    background-color: #fff;
-    width: 400px;
-    height: calc(100% - 56px);
-    font-family: 'Modern_Sans_Light';
-}
-.modal-fixed-header {
-    padding: 0;
-    height: 60%;
-}
-.modal-header {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 0;
-    border-radius: 0 0 2px 2px;
-    background-color: #fafafa;
-    padding: 4px 6px;
-    height: 56px;
-    width: 100%;
-    color: black;
-}
-.modal .modal-content {
-    padding: 0;
-}
-
-.modal-content {
-    position: absolute;
-    top:56px;
-    height: calc(100% - 56px);
-    max-height: 100%;
-    width: 100%;
-    overflow-y: auto;
-    color: black;
-}
-.modal h4 {
-    padding: 24px;
-}
-#custommodalcontent {
-    padding: 24px;
-}
-#loginmodaltitle {
-    padding-top: 10px;
-    margin-top: 0;
-}
-.loginpics {
-    height: 60px;
-    border-radius: 50%;
-} 
-.nomargin {
-    margin-bottom: 0;
-}
-.loginbutton {
-    margin-left: 37%;
-}
-.signedin {
-    display: none;
-}
-#signupbutton2 {
-    color: white; 
-    -webkit-appearance: none;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 }
